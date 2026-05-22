@@ -1,0 +1,334 @@
+/* Premium Elegant Theme Palette */
+:root {
+    --bg-dark: #0f172a;
+    --card-dark: rgba(30, 41, 59, 0.7);
+    --primary-glow: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --accent-glow: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-glass: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Navigation Bar */
+header {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-glass);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: var(--primary-glow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--text-main);
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+/* High-Impact Hero Layout - Upgraded with Background Image */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), 
+                url('images.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+/* Premium Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-glow);
+    color: white;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(139, 92, 246, 0.5);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Page Layout Wrappers */
+.page-content, section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+}
+
+/* Glassmorphism Cards */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.card {
+    background: var(--card-dark);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-glass);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.4);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* Neon Dynamic Badges */
+.tag {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.accent-tag {
+    background: rgba(16, 185, 129, 0.15) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Clean Modernized Forms */
+.booking-container {
+    background: var(--card-dark);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 24px;
+    border: 1px solid var(--border-glass);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: white;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* System Alerts */
+.message {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.message.success {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.message.error {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Floating AI Chat Engine Layout */
+.chatbot-wrapper {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 1000;
+}
+
+.chatbot-btn {
+    background: var(--primary-glow);
+    color: white;
+    border: none;
+    padding: 1rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+    transition: transform 0.2s;
+}
+
+.chatbot-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Glow Text Styling Rule */
+.glow-text {
+    background: var(--primary-glow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Table Style for About Page */
+.premium-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.premium-table th, .premium-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.premium-table th {
+    background: rgba(255,255,255,0.03);
+    color: white;
+}
+
+.hidden { 
+    display: none !important; 
+}
+
+/* Responsive Structural Media Queries */
+@media (max-width: 768px) {
+    .nav-links { 
+        display: none; 
+    }
+    .hero-content h1 { 
+        font-size: 2.5rem; 
+    }
+}

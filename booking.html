@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Booking - PathPort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🚀 PathPort</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h2>📅 Automated Smart Booking</h2>
+        <p class="section-subtitle">Instantly verify your schedule parameters against our real-time processing engine.</p>
+
+        <div class="booking-container">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required placeholder="Sapkota Madhav">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="team@pathport.com">
+                </div>
+                <div class="form-group">
+                    <label for="travelDate">Departure Date</label>
+                    <input type="date" id="travelDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Target Zone</label>
+                    <select id="destination" required>
+                        <option value="">Select an operation zone</option>
+                        <option value="Seoul">Seoul, South Korea</option>
+                        <option value="Kathmandu">Kathmandu, Nepal</option>
+                        <option value="Kyoto">Kyoto, Japan</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-block">Lock Flight Parameters</button>
+            </form>
+            <div id="bookingMessage" class="message hidden"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
